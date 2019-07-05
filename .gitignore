@@ -52,3 +52,7 @@ CATKIN_IGNORE
 
 # Python
 .python-version
+
+# colcon
+log
+install
