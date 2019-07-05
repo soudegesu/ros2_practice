@@ -1,2 +1,3 @@
 lxml
 colcon-common-extensions
+typing
