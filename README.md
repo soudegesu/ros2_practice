@@ -10,7 +10,16 @@ This is my [ROS2](https://index.ros.org/doc/ros2/) practice repository.
 
 ## Setting up
 
+* Install dependency python modules
+
 ```bash
 pip install -U pip
 pip install -r requirements.lock
+```
+
+* setting up ros2
+
+```bash
+colcon build
+source ./install/setup.zsh 
 ```
