@@ -54,6 +54,7 @@ launch==0.8.4
 launch-ros==0.8.4
 launch-testing==0.8.4
 launch-testing-ros==0.8.4
+lxml==4.3.4
 more-itertools==7.1.0
 osrf-pycommon==0.1.7
 packaging==19.0
