@@ -49,13 +49,30 @@ Vagrant.configure("2") do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
-  #
-  #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
-  # end
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "ubuntu-gui"
+    # Display the VirtualBox GUI when booting the machine
+    vb.gui = true
+    vb.cpus = "2"
+    # Customize the amount of memory on the VM:
+    vb.memory = "2048"
+    vb.customize [
+      "modifyvm", :id,
+      "--vram", "256",
+      "--accelerate3d", "on",
+      "--hwvirtex", "on",
+      "--nestedpaging", "on",
+      "--largepages", "on",
+      "--ioapic", "on",
+      "--pae", "on",
+      "--paravirtprovider", "kvm",
+      "--clipboard", "bidirectional",
+      "--draganddrop", "bidirectional",
+      "--monitorcount", "1",
+      "--nictype1", "virtio",
+      "--nictype2", "virtio",
+    ]    
+  end
   #
   # View the documentation for the provider you are using for more
   # information on available options.
