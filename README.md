@@ -12,6 +12,15 @@ This is my [ROS2](https://index.ros.org/doc/ros2/) practice repository.
 
 ## Setting up
 
+```bash
+vagrant up --provision
+```
+
+```bash
+vagrant ssh
+sudo apt-get install -y lubuntu-desktop
+```
+
 * Install dependency python modules
 
 ```bash
