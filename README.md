@@ -5,6 +5,7 @@ This is my [ROS2](https://index.ros.org/doc/ros2/) practice repository.
 ## Prerequisites
 
 * [Vagrant](https://www.vagrantup.com/) `2.2.5`
+  * `vagrant-vbguest` plugin (recomended)
 * [Virtual Box](https://www.virtualbox.org/) `6.0.8`
 * Python 3.5.6 or more
 * CMake 3.14.5
