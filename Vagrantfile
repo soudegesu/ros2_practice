@@ -93,7 +93,9 @@ Vagrant.configure("2") do |config|
     # Setup Source
     sudo apt-get install -y curl gnupg2 lsb-release tree vim
     curl http://repo.ros2.org/repos.key | sudo apt-key add -
+    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
     sudo sh -c 'echo "deb [arch=amd64,arm64] http://packages.ros.org/ros2/ubuntu `lsb_release -cs` main" > /etc/apt-get/sources.list.d/ros2-latest.list'
+    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
     # Install ROS2 Package
     sudo apt-get update
     sudo apt-get install -y ros-dashing-desktop
@@ -107,6 +109,9 @@ Vagrant.configure("2") do |config|
     sudo apt-get update
     sudo apt-get install -y ros-dashing-rmw-opensplice-cpp
     # Install Colcon
-    sudo apt-get install -y python3-colcon-common-extensions    
+    sudo apt-get install -y python3-colcon-common-extensions
+    # Install Visual Studio Code
+    sudo apt install software-properties-common apt-transport-https wget
+    sudo apt install code
   SHELL
 end
