@@ -7,8 +7,8 @@
 # you're doing.
 Vagrant.configure("2") do |config|
 
-  config.vbguest.auto_update = false
-  config.vbguest.no_remote = true
+  config.vbguest.auto_update = true
+  config.vbguest.no_remote = false
   
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
@@ -101,7 +101,7 @@ Vagrant.configure("2") do |config|
     sudo apt-get install -y ros-dashing-desktop
     sudo apt-get install -y ros-dashing-ros-base
     # ROS2 CLI Complete
-    sudo apt-get install -y python3-argcomplete
+    sudo apt-get install python-pip python3-argcomplete
     # Sourcing Setup Script
     source /opt/ros/dashing/setup.bash
     echo "source /opt/ros/dashing/setup.bash" >> ~/.bashrc
